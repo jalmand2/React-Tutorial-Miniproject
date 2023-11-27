@@ -1,9 +1,12 @@
-function Todo() {
+function Todo(props) {
+    function deleteHandler() {
+        
+    } 
   return (
   <div className="card">
-    <h2>TITLE</h2>
+    <h2>{props.text}</h2>
     <div classsName="actions">
-      <button className="btn">Delete</button>
+      <button className="btn" onClick={deleteHandler}>Delete</button>
     </div>
   </div>
   );
@@ -12,3 +15,4 @@ function Todo() {
 export default Todo;
 // Name of function has to start w/ capital to differentiate it from the built-in HTML element
 // React wants capitalization of custom components
+//props helps us to pass values
